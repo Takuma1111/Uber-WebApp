@@ -34,3 +34,15 @@ export const replaceLineFoods = (params) => {
     })
     .catch((e) => { throw e; })
   };
+
+
+  //lineFoodsはURL文字列でhttp://localhost:3000/api/v1/line_foodsを指している
+  //axios.get()でGETリクエストを投げている。この返り値はthen...catchで成功/失敗した場合でレスポンスを変えている
+export const fetchLineFoods = () => {
+    return axios.get(lineFoods)
+    .then(res => {
+      return res.data
+    })
+    .catch((e) => { throw e; })
+  };
+  
